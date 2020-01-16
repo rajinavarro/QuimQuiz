@@ -9,9 +9,6 @@ const MAX_HIGH_SCORES = 5;
 
 
 finalScore.innerText = mostRecentScore;
-if(finalScore.innerText <= 30){
-    console.log('Congrats for the first level')
-}
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value;
 })
