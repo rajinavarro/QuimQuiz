@@ -151,12 +151,12 @@ startGame = () => {
 getNewQuestion = () => {
     if(availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS){
         localStorage.setItem('mostRecentScore', score);
-        return window.location.assign("C:\\Users\\raji\\Desktop\\QuimQuiz\\end.html");
+        return window.location.assign("C:\\Users\\raji\\Desktop\\QuimQuiz\\html\\end.html");
     }
     
     if((questionCounter == 5 && score < 30) || (questionCounter == 10 && score < 60) || (questionCounter == 15 && score < 90)){
         localStorage.setItem('mostRecentScore', score);
-        return window.location.assign("C:\\Users\\raji\\Desktop\\QuimQuiz\\gameover.html");
+        return window.location.assign("C:\\Users\\raji\\Desktop\\QuimQuiz\\html\\gameover.html");
     }
     if(score >= 30 &&  questionCounter == 5){
         level.innerText = 'Stage 2'
