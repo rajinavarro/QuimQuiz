@@ -1,6 +1,7 @@
 :root{
     
     background-image: linear-gradient(#fafafa,#E0E0E0 );
+    --main-color: #3071E9;
 }
 
 .choice-container{
@@ -8,28 +9,29 @@
     margin-bottom: 0.5rem;
     width: 100%;
     font-size: 1.8rem;
-    border: 0.1rem solid rgb(86, 165, 235, 0.25);
-    background-color: #E0E0E0;
-    border-radius: 1rem;
-    border-color:#3071E9 ;
+    border: 0.1rem solid var(--main-color);
+    background-color: var(--main-color);
+    border-radius: 1.7rem;
+    border-color:var(--main-color) ;
 }
 
 .choice-container:hover{
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgb(86, 185, 235, 0.5);
+    box-shadow: 0 0.4rem 1.4rem 0 var(--main-color);
     transform: translate(-0.1rem);
     transition: transform 158ms;
 }
 .choice-prefix{
-    padding: 1.5rem 2.5rem;
-    background-color: #3071E9;
-    color: #E4E4E2;
-    
+    padding: 1.5rem 1.2rem;
+    color: rgb(255, 255, 255);
+    align-self: center;
+    font-weight: bold;
 }
 .choice-text{
     padding: 1.5rem;
     width: 100%;
     font-weight: bold;
+    color: #ffffff;
 }
 
 .correct {
@@ -37,7 +39,22 @@
 }
 
 .incorrect {
-    background-color: #dc3545;
+    background-color: #a8212e;
+}
+
+#logo{
+    width:15rem;
+    margin-top: 1.8rem;
+}
+
+h2 {
+    font-size: 2.2vh;
+    margin-top: 55%;
+    color: #404040;
+}
+
+#question{
+    margin-top: 10rem;
 }
 
 /* HUD */
@@ -45,34 +62,42 @@
 #hud {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 6.5%;
+    align-self: center;
 }
 
 .hud-prefix{
     text-align: center;
-    font-size: 2rem;
+    align-self: center;
+    font-size: 1.8rem;
+    margin-top: 3.2rem;
 }
 
 .hud-main-text{
     text-align: center;
-    color: #3071E9;
-    font-size: 4rem;
+    color: var(--main-color);
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    
 }
 
 #progressBar{
     width: 20rem;
-    height: 4rem;
-    border: 0.3rem solid #3071E9;
+    height: 2.5rem;
+    border: 0.3rem solid var(--main-color);
     margin-top: 1.5rem;
     border-radius: 1rem;
 }
 
 #progressBarFull{
-    height: 3.4rem;
-    background-color: #3071E9;
+    height: 2rem;
+    background-color: var(--main-color);
     width: 0px;
     border-radius: 0.6rem;
 }
 
 #level{
-    margin-top: 0;
+    margin-top: 0.5rem;
+    font-size: 2rem;
 }

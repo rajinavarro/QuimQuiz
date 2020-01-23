@@ -1,12 +1,13 @@
 :root{
-    background-color: #dc3545;
+    background-color: #af1f2d;
     font-size: 62.5%;
 }
 
 h1{
     font-size: 5.5rem;
-    color: #E4E4E2;
+    color: white;
 }
 .btn{
-    color: #3071E9;
+    color: #af1f2d;
+    background-color: white;
 }
