@@ -24,6 +24,6 @@ saveHighScore = e => {
     highScores.splice(5);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign('C:\\Users\\raji\\Desktop\\QuimQuiz\\html\\index.html');
+    window.location.assign('./index.html');
     
 };
