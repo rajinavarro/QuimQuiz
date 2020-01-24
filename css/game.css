@@ -49,12 +49,13 @@
 
 h2 {
     font-size: 2.2vh;
-    margin-top: 55%;
+    margin-top: 55vh;
     color: #404040;
 }
 
 #question{
-    margin-top: 10rem;
+    margin-top: 16vh;
+    margin-bottom: 4vh;
 }
 
 /* HUD */

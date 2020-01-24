@@ -118,7 +118,7 @@ let questions = [
 let questions2 = [
     {
 
-        question: 'Dadas as configurações eletrônicas dos seguintes átomos no seu estado fundamental: \n\nI. 1s2 2s2 2p63s2 3p6\n\nII. 1s2 2s2 2p63s2\n\nIII. 1s2 2s2 2p6 3s2 3p6 4s1\n\nIV. 1s2 2s2 2p63s2 3p5.\n\nÉ ERRADO afirmar que: \n\n', 
+        question: 'Dadas as configurações eletrônicas dos seguintes átomos no seu estado fundamental: \n\nI. 1s2 2s2 2p63s2 3p6\nII. 1s2 2s2 2p63s2\nIII. 1s2 2s2 2p6 3s2 3p6 4s1\nIV. 1s2 2s2 2p63s2 3p5.\nÉ ERRADO afirmar que: \n', 
         
         choice1: 'Dentre os átomos acima, o átomo I tem o maior potencial de ionização',
         choice2: 'A perda de dois elétrons pelo átomo II leva à formação do cátion Mg2+',
@@ -196,7 +196,7 @@ let questions2 = [
         
         {
         
-        question: 'Dadas as moléculas a seguir:\n\nI- BeCl2\n\nII- H2 O\n\nIII- CCl4\n\nIV- CO2\n\nV- BF3\n\nQual delas é considerada polar?\n',
+        question: 'Dadas as moléculas a seguir:\n\nI- BeCl2\n\nII- H2 O\n\nIII- CCl4\n\nIV- CO2\n\nQual delas é considerada polar?\n',
         
         choice1: 'I',
         choice2: 'II',
