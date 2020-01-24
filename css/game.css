@@ -89,6 +89,7 @@ h2 {
     border: 0.3rem solid var(--main-color);
     margin-top: 1.5rem;
     border-radius: 1rem;
+    background-color:#fafafa ;
 }
 
 #progressBarFull{

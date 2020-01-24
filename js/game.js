@@ -6,7 +6,6 @@ const progressBarFull = document.getElementById('progressBarFull');
 const progressBarinnerHtml = document.getElementsByClassName('progressBar');
 const navbarInnerHtml = document.getElementsByClassName('navbar');
 const choiceContainerInnerHtml = document.getElementsByClassName('choice-container');
-console.log(navbarInnerHtml);
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -339,14 +338,10 @@ getNewQuestion = () => {
     }
     if(score >= 30 &&  questionCounter == 5){
         document.documentElement.style.setProperty('--main-color', '#E8AE31');
-        console.log('Congrats for the first level');
     }
     if(score >= 60 && questionCounter ==10){
         document.documentElement.style.setProperty('--main-color', '#FF694F');
-        console.log('Congrats for the second level');
-    }
-    if(score >= 90 && questionCounter ==15){
-        console.log('Congrats for the third level');
+     
     }
 
     questionCounter++;
@@ -355,8 +350,11 @@ getNewQuestion = () => {
     progressBarFull.style.width = ((questionCounter / MAX_QUESTIONS) * 100 + '%');
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    
     currentQuestion = availableQuestions[questionIndex];
+
     question.innerText = currentQuestion.question;
+
 
     choices.forEach(choice => {
         const number = choice.dataset['number'];
@@ -367,36 +365,51 @@ getNewQuestion = () => {
     
     acceptingAnswers = true;
     if (questionCounter == 5){
-        console.log('level 2');
-        
         availableQuestions = [...questions2];
-        
-
     }
     if (questionCounter == 10){
-        console.log('level 3');
         availableQuestions = [...questions3];
     }
 };
 
+correctChoice = correctChoice => {
+
+    choices.forEach(choice => {
+        if (choice.dataset['number'] == currentQuestion.answer){
+            const correctChoice = choice;
+            correctChoice.parentElement.classList.add('correct');
+            setTimeout(() => {
+                correctChoice.parentElement.classList.remove('correct');
+                
+            }, 1300);
+        }
+    })
+    
+};
+
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-
+        
+        
         if(!acceptingAnswers) return;
         acceptingAnswers = false;
         
         const selectedChoice = e.target;
+        
         const selectedAnswer = selectedChoice.dataset['number'];
+        
 
         const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-
         if (classToApply === 'correct'){
             incrementScore(CORRECT_BONUS);
         }
         selectedChoice.parentElement.classList.add(classToApply);
-        
+        if( classToApply === 'incorrect'){
+            correctChoice();
+        }
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
+            
             getNewQuestion();
         }, 1300);
     });
