@@ -8,7 +8,7 @@ const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const MAX_HIGH_SCORES = 5;
 
 
-if (mostRecentScore >= 90 && mostRecentScore < 100){
+if (mostRecentScore >= 80 && mostRecentScore < 100){
     congratsIcon.src = "./assets/Morty.png";
 }
 

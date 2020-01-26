@@ -40,7 +40,7 @@ h4 {
 
 #name{
     position: absolute;
-    margin-top: -30rem;
+    margin-top: -25rem;
     width: 55rem;
 }
 
@@ -75,7 +75,8 @@ h3 {
     height: 15rem;
 }
 .gifIcon{
-    width: 60rem;
+    width: 58rem;
+    margin-bottom: -3rem;
 }
 
 .gameOver{
@@ -108,7 +109,9 @@ h3 {
     color: #3071E9;
     border-color: transparent;
     border: 0rem;
-    width: 20rem
+    width: 16.5rem;
+    margin-top: 1rem;
+    
 }
 /* UTILITIES */
 

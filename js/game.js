@@ -4,6 +4,7 @@ const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
 const progressBarinnerHtml = document.getElementsByClassName('progressBar');
+const progressBar = document.getElementById('progressBar');
 const navbarInnerHtml = document.getElementsByClassName('navbar');
 const choiceContainerInnerHtml = document.getElementsByClassName('choice-container');
 
@@ -345,9 +346,10 @@ getNewQuestion = () => {
     }
 
     questionCounter++;
-    progressText.innerText = 'Question ' + questionCounter +'/' + MAX_QUESTIONS;
+    //progressText.innerText = 'Question ' + questionCounter +'/' + MAX_QUESTIONS;
     // Update the progress bar
-    progressBarFull.style.width = ((questionCounter / MAX_QUESTIONS) * 100 + '%');
+    //progressBarFull.style.width = ((score / 150) * 100 + '%');
+    scoreText.innerText =  questionCounter + ' / ' + MAX_QUESTIONS
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     
@@ -378,6 +380,7 @@ correctChoice = correctChoice => {
         if (choice.dataset['number'] == currentQuestion.answer){
             const correctChoice = choice;
             correctChoice.parentElement.classList.add('correct');
+            
             setTimeout(() => {
                 correctChoice.parentElement.classList.remove('correct');
                 
@@ -417,7 +420,16 @@ choices.forEach(choice => {
 
 incrementScore = num => {
     score +=num;
-    scoreText.innerText = score;
+    progressBarFull.style.width = ((score / 150) * 100 + '%');
+    progressBarFull.style.backgroundColor = '#28a745';
+    progressBar.style.borderColor = '#28a745';
+    
+    setTimeout(() => {
+        progressBarFull.style.backgroundColor = 'var(--main-color)';
+        progressBar.style.borderColor = 'var(--main-color)';
+        
+    }, 1300);
+    //scoreText.innerText = score;
 }
 
 startGame();
