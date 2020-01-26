@@ -1,0 +1,63 @@
+:root{   
+    background-image: linear-gradient(#fafafa,#E0E0E0 );
+    --main-color: #3071E9;
+}
+
+h1{
+    font-size: 4.5rem;
+}
+
+#yellow{
+    color: #E8AE31;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+#red{
+    color: #FF694F;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+#blue{
+    font-weight: bold;
+    color: var(--main-color);
+    font-variant: small-caps;
+}
+
+#green{
+    color: #28a745;
+    
+}
+#gameover{
+    color: #af1f2d;
+}
+#welcome{
+    margin-top: 0rem;
+    text-align: center;
+}
+#introduction{
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-top: 6rem;
+    margin-bottom:7rem;
+}
+.btn{
+    margin-bottom: 0rem;
+}
+#tutorial-btn-container{
+    margin-top: 1rem;
+}
+#jump{
+    color: var(--main-color);
+    background-color: white;
+    border-color: transparent;
+    margin-top: 0rem;
+    opacity: 80%;
+    margin-left: 5rem;
+    margin-right: 6rem;
+}
+#level-icons{
+    height: 4rem;
+    width: 5rem;
+}
